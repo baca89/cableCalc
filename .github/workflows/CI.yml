@@ -51,6 +51,7 @@ jobs:
         run: |
           npm run lint
 
-      - name: E2E
-        run: |
-          npm run e2e
+  	# TODO E2E mit Cypress einrichten
+    #  - name: E2E
+    #    run: |
+    #      npm run e2e
