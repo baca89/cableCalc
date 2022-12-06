@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [14, 16, 18]
 
     steps:
       - name: Checkout
@@ -43,9 +43,7 @@ jobs:
         run: |
           npm run build
 
-      - name: Lint
-        run: |
-          npm run lint
+
 
       - name: Test
         run: |
