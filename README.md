@@ -1,4 +1,7 @@
 # CableCalculator
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/baca89/cableCalc/CI/badge.svg)
+![version](https://img.shields.io/badge/version-1.2.3-blue)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
