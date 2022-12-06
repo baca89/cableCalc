@@ -10,42 +10,43 @@ export class Cable {
     },
     cosPhi : Number,
     querschnitt : Number,
-    material : Cable.material,
+    material : material,
     temperatur : Number,
-    verlegeart : Cable.verlegearten
+    verlegeart : verlegearten
     }
 
-
-
+    //TODO als Dummy eingebaut für ESLint
+    leistung () :void {
+      WurzelDrei;
+      querschnitte[0];
+    }
 
 
 }
 
+enum material  {
+  "Kupfer",
+  "Aluminium"
+}
 
-
-  export namespace Cable
-{
-    export enum material {
-      "Kupfer",
-      "Aluminium"
-    }
-
-    //TODO Verlegearten ergänzen
-    export const verlegearten =
+ //TODO Verlegearten ergänzen
+const verlegearten =
     [
       {
         kennung : "C",
         bezeichnung : "Verlegung in wärmegedämmten Wänden"
       }
     ]
-    export const WurzelDrei = 1.73205080757;
+
+
+    const WurzelDrei = 1.73205080757;
+
 
     //TODO Querschnitte ergänzen
-    export const querschnitte =
+    const querschnitte =
     [
       {
       querschnitt : 0.5,
       strom : 1
       }
     ];
-}
