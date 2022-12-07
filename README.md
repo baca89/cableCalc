@@ -1,5 +1,5 @@
 # CableCalculator
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/baca89/cableCalc/CI)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/baca89/cableCalc/Angular)
 
 ![Version Package.json](https://img.shields.io/github/package-json/v/baca89/cableCalc)
 
