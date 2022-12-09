@@ -5,6 +5,12 @@ on:
   push:
     branches:
       - master
+permissions:
+  issues: write
+  pull-requests: write
+  repository-projects: write
+  contents: write
+
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -54,3 +60,33 @@ jobs:
     #  - name: E2E
     #    run: |
     #      npm run e2e
+
+  versionierung:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v3
+      with:
+          ref: ${{ github.head_ref }}   # checkout the correct branch name
+          fetch-depth: 0                # fetch the whole repo history
+
+    - name: Run latest-tag
+      uses: EndBug/latest-tag@latest
+
+    - name: Git Version
+      uses: codacy/git-version@2.5.4
+
+  Issues_erstellen:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+          ref: ${{ github.head_ref }}   # checkout the correct branch name
+          fetch-depth: 0                # fetch the whole repo history
+
+    - name: todo-issue
+      uses: DerJuulsn/todo-issue@v1.1.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
