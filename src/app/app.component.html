@@ -1,17 +1,20 @@
-<form [formGroup]="kabeldaten">
+<form [formGroup]="kabeldaten" class="inuptform">
 
   <label for="laenge">Länge: </label>
-  <input id="laenge" type="text" formControlName="laenge" class="form-control">
-  <div *ngIf="kabeldaten.controls.laenge.invalid" class="alert alert-danger">
+  <input id="laenge" type="number" formControlName="laenge" class="form-control">
+  <!-- <div *ngIf="kabeldaten.controls.laenge.invalid" class="alert alert-danger"> -->
   <br>
+
   <label for="spannung">Spannung: </label>
-  <input id="spannung" type="text" formControlName="spannung">
+  <input id="spannung" type="number" formControlName="spannung">
   <br>
   <label for="strom">Strom: </label>
-  <input id="strom" type="text" formControlName="strom">
-
+  <input id="strom" type="number" formControlName="strom">
+    <br>
+    <div class="error">{{ Fehlermeldung }}</div>
+    <br>
   <button type="button" (click)="calc()">berechnen</button>
 </form>
 
 
-<!-- <div *ngIf="kabeldaten.controls.laenge.invalid && (kabeldaten.controls.laenge.dirty || kabeldaten.controls.laenge.touched)" class="alert alert-danger"> -->
+<!-- <div *ngIf="kabeldaten.controls.laenge.invalid && (kabeldaten.controls.laenge.dirty || kabeldaten.controls.laenge.touched)" class="alert alert-danger">  -->
