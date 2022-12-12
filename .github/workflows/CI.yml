@@ -87,6 +87,6 @@ jobs:
           fetch-depth: 0                # fetch the whole repo history
 
     - name: todo-issue
-      uses: DerJuulsn/todo-issue@v1.1.2
+      uses: DerJuulsn/todo-issue@v1.1.4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
